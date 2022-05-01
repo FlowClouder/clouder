@@ -14,24 +14,20 @@
  * limitations under the License.
  */
 
-package com.flowcoder.clouder.core;
+package com.flowclouder.clouder.auth.client;
 
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
-import org.springframework.cloud.openfeign.EnableFeignClients;
+import org.springframework.cloud.openfeign.FeignClient;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 
 /**
- * Clouder core
+ * OpenFeignClient Examples
  * @author kingkiller
  */
-@EnableFeignClients
-@EnableDiscoveryClient
-@SpringBootApplication
-public class CoreApplication {
+@FeignClient("clouder-core")
+public interface CoreClient {
 
-    public static void main(String[] args) {
-        SpringApplication.run(CoreApplication.class, args);
-    }
+    @GetMapping("/mook/provider/{name}")
+    public String provider(@PathVariable String name);
 
 }
