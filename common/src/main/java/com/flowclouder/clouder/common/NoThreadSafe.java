@@ -14,24 +14,16 @@
  * limitations under the License.
  */
 
-package com.flowclouder.clouder.auth;
+package com.flowclouder.clouder.common;
 
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
-import org.springframework.cloud.openfeign.EnableFeignClients;
+import java.lang.annotation.*;
 
 /**
- * Clouder auth
+ * Annotation that marks a method as not thread safe.
  * @author kingkiller
  */
-@EnableFeignClients(basePackages = {"com.flowclouder.clouder.auth.client"})
-@EnableDiscoveryClient
-@SpringBootApplication
-public class AuthApplication {
-
-    public static void main(String[] args) {
-        SpringApplication.run(AuthApplication.class, args);
-    }
-
+@Documented
+@Target({ElementType.TYPE, ElementType.METHOD})
+@Retention(RetentionPolicy.SOURCE)
+public @interface NoThreadSafe {
 }

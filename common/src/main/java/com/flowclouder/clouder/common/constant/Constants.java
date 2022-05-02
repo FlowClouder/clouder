@@ -14,24 +14,18 @@
  * limitations under the License.
  */
 
-package com.flowclouder.clouder.auth;
-
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
-import org.springframework.cloud.openfeign.EnableFeignClients;
+package com.flowclouder.clouder.common.constant;
 
 /**
- * Clouder auth
+ * Clouder Constants
  * @author kingkiller
  */
-@EnableFeignClients(basePackages = {"com.flowclouder.clouder.auth.client"})
-@EnableDiscoveryClient
-@SpringBootApplication
-public class AuthApplication {
+public class Constants {
 
-    public static void main(String[] args) {
-        SpringApplication.run(AuthApplication.class, args);
-    }
+    public static final String DEFAULT_GROUP = "DEFAULT_GROUP";
+
+    public static final String APPNAME = "AppName";
+
+    public static final String NULL = "";
 
 }

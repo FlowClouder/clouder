@@ -14,24 +14,18 @@
  * limitations under the License.
  */
 
-package com.flowclouder.clouder.auth;
+package com.flowclouder.clouder.auth.annotation;
 
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
-import org.springframework.cloud.openfeign.EnableFeignClients;
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
 
 /**
- * Clouder auth
+ * Annotation indicating that the annotated request should be authorized.
  * @author kingkiller
  */
-@EnableFeignClients(basePackages = {"com.flowclouder.clouder.auth.client"})
-@EnableDiscoveryClient
-@SpringBootApplication
-public class AuthApplication {
+@Retention(RetentionPolicy.RUNTIME)
+public @interface Secured {
 
-    public static void main(String[] args) {
-        SpringApplication.run(AuthApplication.class, args);
-    }
+
 
 }

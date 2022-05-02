@@ -14,24 +14,24 @@
  * limitations under the License.
  */
 
-package com.flowclouder.clouder.auth;
-
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
-import org.springframework.cloud.openfeign.EnableFeignClients;
+package com.flowclouder.clouder.common.constant;
 
 /**
- * Clouder auth
+ * Clouder header constants
  * @author kingkiller
  */
-@EnableFeignClients(basePackages = {"com.flowclouder.clouder.auth.client"})
-@EnableDiscoveryClient
-@SpringBootApplication
-public class AuthApplication {
+public interface HttpHeaderConsts {
 
-    public static void main(String[] args) {
-        SpringApplication.run(AuthApplication.class, args);
-    }
+    String CLIENT_VERSION_HEADER = "Client-Version";
+    String USER_AGENT_HEADER = "User-Agent";
+    String REQUEST_SOURCE_HEADER = "Request-Source";
+    String CONTENT_TYPE = "Content-Type";
+    String CONTENT_LENGTH = "Content-Length";
+    String ACCEPT_CHARSET = "Accept-Charset";
+    String ACCEPT_ENCODING = "Accept-Encoding";
+    String CONTENT_ENCODING = "Content-Encoding";
+    String CONNECTION = "Requester";
+    String REQUEST_ID = "RequestId";
+    String REQUEST_MODULE = "Request-Module";
 
 }

@@ -16,22 +16,9 @@
 
 package com.flowclouder.clouder.auth;
 
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
-import org.springframework.cloud.openfeign.EnableFeignClients;
-
 /**
- * Clouder auth
+ * Protocol auth service.
  * @author kingkiller
  */
-@EnableFeignClients(basePackages = {"com.flowclouder.clouder.auth.client"})
-@EnableDiscoveryClient
-@SpringBootApplication
-public class AuthApplication {
-
-    public static void main(String[] args) {
-        SpringApplication.run(AuthApplication.class, args);
-    }
-
+public interface ProtocolAuthService {
 }
