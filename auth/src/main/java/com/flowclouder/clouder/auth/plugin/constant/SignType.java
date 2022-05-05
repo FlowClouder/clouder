@@ -14,29 +14,20 @@
  * limitations under the License.
  */
 
-package com.flowclouder.clouder.common.constant;
+package com.flowclouder.clouder.auth.plugin.constant;
 
 /**
- * Clouder Constants
+ * Auth sign type.
  * @author kingkiller
  */
-public class Constants {
+public class SignType {
 
-    public static final String DEFAULT_GROUP = "DEFAULT_GROUP";
+    public static final String NAMING = "naming";
 
-    public static final String APPNAME = "AppName";
+    public static final String CONFIG = "config";
 
-    public static final String NULL = "";
+    public static final String CONSOLE = "console";
 
-
-    /**
-     * The constants in exception directory
-     */
-    public static class Exception {
-
-        public static final int DESERIALIZE_ERROR_CODE = 101;
-
-        public static final int SERIALIZE_ERROR_CODE = 100;
-    }
+    public static final String SPECIFIED = "specified";
 
 }

@@ -14,29 +14,11 @@
  * limitations under the License.
  */
 
-package com.flowclouder.clouder.common.constant;
+package com.flowclouder.clouder.common.http;
 
 /**
- * Clouder Constants
+ * Clouder HttpUtils
  * @author kingkiller
  */
-public class Constants {
-
-    public static final String DEFAULT_GROUP = "DEFAULT_GROUP";
-
-    public static final String APPNAME = "AppName";
-
-    public static final String NULL = "";
-
-
-    /**
-     * The constants in exception directory
-     */
-    public static class Exception {
-
-        public static final int DESERIALIZE_ERROR_CODE = 101;
-
-        public static final int SERIALIZE_ERROR_CODE = 100;
-    }
-
+public class HttpUtils {
 }

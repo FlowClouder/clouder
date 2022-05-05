@@ -14,29 +14,28 @@
  * limitations under the License.
  */
 
-package com.flowclouder.clouder.common.constant;
+package com.flowclouder.clouder.auth.plugin.exception;
+
+import com.flowclouder.clouder.common.exception.ClouderException;
 
 /**
- * Clouder Constants
+ * Exception to be thrown if authorization is failed.
  * @author kingkiller
  */
-public class Constants {
+public class AccessException extends ClouderException {
 
-    public static final String DEFAULT_GROUP = "DEFAULT_GROUP";
+    private static final long serialVersionUID = -2926344920552803270L;
 
-    public static final String APPNAME = "AppName";
+    public AccessException() {
 
-    public static final String NULL = "";
+    }
 
+    public AccessException(int code) {
+        this.setErrCode(code);
+    }
 
-    /**
-     * The constants in exception directory
-     */
-    public static class Exception {
-
-        public static final int DESERIALIZE_ERROR_CODE = 101;
-
-        public static final int SERIALIZE_ERROR_CODE = 100;
+    public AccessException(String msg) {
+        this.setErrMsg(msg);
     }
 
 }

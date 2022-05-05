@@ -14,29 +14,34 @@
  * limitations under the License.
  */
 
-package com.flowclouder.clouder.common.constant;
+package com.flowclouder.clouder.auth.plugin.constant;
 
 /**
- * Clouder Constants
+ * Resource action type definitions.
  * @author kingkiller
  */
-public class Constants {
 
-    public static final String DEFAULT_GROUP = "DEFAULT_GROUP";
-
-    public static final String APPNAME = "AppName";
-
-    public static final String NULL = "";
-
+public enum ActionTypes {
 
     /**
-     * The constants in exception directory
+     * Read.
      */
-    public static class Exception {
+    READ("r"),
 
-        public static final int DESERIALIZE_ERROR_CODE = 101;
+    /**
+     * Write.
+     */
+    WRITE("W");
 
-        public static final int SERIALIZE_ERROR_CODE = 100;
+    private final String action;
+
+    ActionTypes(String action) {
+        this.action = action;
     }
 
+
+    @Override
+    public String toString() {
+        return action;
+    }
 }

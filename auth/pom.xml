@@ -9,7 +9,7 @@
         <relativePath>../pom.xml</relativePath>
     </parent>
 
-    <artifactId>auth</artifactId>
+    <artifactId>clouder-auth</artifactId>
     <packaging>jar</packaging>
 
     <name>clouder-auth ${project.version}</name>
@@ -20,6 +20,12 @@
     </properties>
 
     <dependencies>
+
+        <dependency>
+            <groupId>com.flowclouder.clouder</groupId>
+            <artifactId>clouder-common</artifactId>
+        </dependency>
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
